@@ -17,7 +17,20 @@ struct ContactsView: View {
             WithViewStore(self.store, observe: \.contacts) { viewStore in
                 List {
                     ForEach(viewStore.state) { contact in
-                        Text(contact.name)
+                        HStack {
+                            Text(contact.name)
+                            Spacer()
+                            Button {
+                                viewStore.send(
+                                    .deleteButtonTapped(
+                                        id: contact.id
+                                    )
+                                )
+                            } label: {
+                                Image(systemName: "trash")
+                                    .foregroundStyle(Color.red)
+                            }
+                        }
                     }
                 }
                 .navigationTitle("Contacts")
@@ -34,29 +47,23 @@ struct ContactsView: View {
         }
         .sheet(
             store: self.store.scope(
-                state: \.$addContact,
-                action: \.addContact
+                state: \.$destination.addContact,
+                action: \.destination.addContact
             )
         ) { AddContactStore in
             NavigationStack {
                 AddContactView(store: AddContactStore)
             }
         }
+        .alert(
+            store: self.store.scope(
+                state: \.$destination.alert,
+                action: \.destination.alert
+            )
+        )
     }
 }
 
 #Preview {
-    ContactsView(
-        store: Store(
-            initialState: ContactsFeature.State(
-                contacts: [
-                    Contact(id: UUID(), name: "Blob"),
-                    Contact(id: UUID(), name: "Blob Jr"),
-                    Contact(id: UUID(), name: "Blob Sr"),
-                ]
-            )
-        ) {
-            ContactsFeature()
-        }
-    )
+    ContactsView(store: TCAContactDemoApp.store)
 }

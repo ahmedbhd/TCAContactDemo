@@ -16,7 +16,6 @@
 		78A60C102B221D6A0068E8DB /* TCAContactDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A60C0F2B221D6A0068E8DB /* TCAContactDemoUITestsLaunchTests.swift */; };
 		78A60C1D2B2222020068E8DB /* ContactsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A60C1C2B2222020068E8DB /* ContactsFeature.swift */; };
 		78A60C202B2222530068E8DB /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 78A60C1F2B2222530068E8DB /* ComposableArchitecture */; };
-		78A60C222B2227060068E8DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A60C212B2227060068E8DB /* ContentView.swift */; };
 		78A60C262B2227700068E8DB /* AddContactFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A60C252B2227700068E8DB /* AddContactFeature.swift */; };
 		78A60C282B222B8B0068E8DB /* AddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A60C272B222B8B0068E8DB /* AddContactView.swift */; };
 /* End PBXBuildFile section */
@@ -51,7 +50,6 @@
 		78A60C0D2B221D6A0068E8DB /* TCAContactDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAContactDemoUITests.swift; sourceTree = "<group>"; };
 		78A60C0F2B221D6A0068E8DB /* TCAContactDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAContactDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		78A60C1C2B2222020068E8DB /* ContactsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsFeature.swift; sourceTree = "<group>"; };
-		78A60C212B2227060068E8DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		78A60C252B2227700068E8DB /* AddContactFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactFeature.swift; sourceTree = "<group>"; };
 		78A60C272B222B8B0068E8DB /* AddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,7 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				78A60BF12B221D680068E8DB /* TCAContactDemoApp.swift */,
-				78A60C212B2227060068E8DB /* ContentView.swift */,
 				78A60C232B2227380068E8DB /* Contacts */,
 				78A60C242B2227660068E8DB /* AddContactFeature */,
 				78A60BF52B221D6A0068E8DB /* Assets.xcassets */,
@@ -299,7 +296,6 @@
 				78A60C262B2227700068E8DB /* AddContactFeature.swift in Sources */,
 				78A60BF22B221D680068E8DB /* TCAContactDemoApp.swift in Sources */,
 				78A60C282B222B8B0068E8DB /* AddContactView.swift in Sources */,
-				78A60C222B2227060068E8DB /* ContentView.swift in Sources */,
 				78A60C1D2B2222020068E8DB /* ContactsFeature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
