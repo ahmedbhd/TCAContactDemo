@@ -9,8 +9,8 @@ import SwiftUI
 import ComposableArchitecture
 
 struct ContactsView: View {
-    
     let store: StoreOf<ContactsFeature>
+    
     
     var body: some View {
         NavigationStack {
@@ -22,13 +22,11 @@ struct ContactsView: View {
                             Spacer()
                             Button {
                                 viewStore.send(
-                                    .deleteButtonTapped(
-                                        id: contact.id
-                                    )
+                                    .deleteButtonTapped(id: contact.id)
                                 )
                             } label: {
                                 Image(systemName: "trash")
-                                    .foregroundStyle(Color.red)
+                                    .foregroundColor(.red)
                             }
                         }
                     }
@@ -50,9 +48,9 @@ struct ContactsView: View {
                 state: \.$destination.addContact,
                 action: \.destination.addContact
             )
-        ) { AddContactStore in
+        ) { addContactStore in
             NavigationStack {
-                AddContactView(store: AddContactStore)
+                AddContactView(store: addContactStore)
             }
         }
         .alert(

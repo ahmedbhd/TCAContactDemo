@@ -16,10 +16,9 @@ struct Contact: Equatable, Identifiable {
 @Reducer
 struct ContactsFeature {
     struct State: Equatable {
-        @PresentationState var destination: Destination.State?
         var contacts: IdentifiedArrayOf<Contact> = []
+        @PresentationState var destination: Destination.State?
     }
-    
     enum Action {
         case addButtonTapped
         case deleteButtonTapped(id: Contact.ID)
@@ -28,7 +27,6 @@ struct ContactsFeature {
             case confirmDeletion(id: Contact.ID)
         }
     }
-    
     var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
@@ -39,6 +37,21 @@ struct ContactsFeature {
                     )
                 )
                 return .none
+                
+                
+            case let .destination(.presented(.addContact(.delegate(.saveContact(contact))))):
+                state.contacts.append(contact)
+                return .none
+                
+                
+            case let .destination(.presented(.alert(.confirmDeletion(id: id)))):
+                state.contacts.remove(id: id)
+                return .none
+                
+                
+            case .destination:
+                return .none
+                
                 
             case let .deleteButtonTapped(id: id):
                 state.destination = .alert(
@@ -51,25 +64,12 @@ struct ContactsFeature {
                     }
                 )
                 return .none
-                
-            case let .destination(.presented(.addContact(.delegate(.saveContact(contact))))):
-                state.contacts.append(contact)
-                return .none
-                
-            case let .destination(.presented(.alert(.confirmDeletion(id: id)))):
-                state.contacts.remove(id: id)
-                return .none
-                
-            case .destination:
-                return .none
-                
             }
         }
         .ifLet(\.$destination, action: \.destination) {
             Destination()
         }
     }
-    
 }
 
 extension ContactsFeature {
