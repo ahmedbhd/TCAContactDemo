@@ -16,6 +16,8 @@
 		78A60C202B2222530068E8DB /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 78A60C1F2B2222530068E8DB /* ComposableArchitecture */; };
 		78A60C262B2227700068E8DB /* AddContactFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A60C252B2227700068E8DB /* AddContactFeature.swift */; };
 		78A60C282B222B8B0068E8DB /* AddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A60C272B222B8B0068E8DB /* AddContactView.swift */; };
+		78D29B0D2B285C6400D09ECD /* ContactDetailFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D29B0C2B285C6400D09ECD /* ContactDetailFeature.swift */; };
+		78D29B0F2B285D0300D09ECD /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D29B0E2B285D0300D09ECD /* ContactDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,8 @@
 		78A60C252B2227700068E8DB /* AddContactFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactFeature.swift; sourceTree = "<group>"; };
 		78A60C272B222B8B0068E8DB /* AddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactView.swift; sourceTree = "<group>"; };
 		78BB98C02B2852CD009CFB90 /* TCAContactDemo.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TCAContactDemo.xctestplan; sourceTree = "<group>"; };
+		78D29B0C2B285C6400D09ECD /* ContactDetailFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailFeature.swift; sourceTree = "<group>"; };
+		78D29B0E2B285D0300D09ECD /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 		78A60BF02B221D680068E8DB /* TCAContactDemo */ = {
 			isa = PBXGroup;
 			children = (
+				78D29B0B2B285C4E00D09ECD /* Detail */,
 				78A60BF12B221D680068E8DB /* TCAContactDemoApp.swift */,
 				78A60C232B2227380068E8DB /* Contacts */,
 				78A60C242B2227660068E8DB /* AddContactFeature */,
@@ -134,6 +139,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		78D29B0B2B285C4E00D09ECD /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				78D29B0C2B285C6400D09ECD /* ContactDetailFeature.swift */,
+				78D29B0E2B285D0300D09ECD /* ContactDetailView.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,9 +259,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				78A60BF42B221D680068E8DB /* ContactsView.swift in Sources */,
+				78D29B0F2B285D0300D09ECD /* ContactDetailView.swift in Sources */,
 				78A60C262B2227700068E8DB /* AddContactFeature.swift in Sources */,
 				78A60BF22B221D680068E8DB /* TCAContactDemoApp.swift in Sources */,
 				78A60C282B222B8B0068E8DB /* AddContactView.swift in Sources */,
+				78D29B0D2B285C6400D09ECD /* ContactDetailFeature.swift in Sources */,
 				78A60C1D2B2222020068E8DB /* ContactsFeature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
